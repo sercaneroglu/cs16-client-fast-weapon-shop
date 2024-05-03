@@ -1,0 +1,70 @@
+// --------------------------------------------------------------------------- \\
+
+touch_setclientonly 1
+alias _exit_menu "touch_removebutton _menu_*; touch_setclientonly 0"
+
+// --------------------------------------------------------------------------- \\
+
+alias _click_sel "play media/tch.wav.wav"
+alias _click_cnd "play media/disconnect.wav"
+
+// --------------------------------------------------------------------------- \\
+
+touch_addbutton "_menu_bg" "*White" "" 0.080000 0.188333 0.480000 0.941667 25 25 25 180 6
+touch_addbutton "_menu_border_D" "*White" "" 0.080000 0.941667 0.480000 0.946667 135 207 255 255 6
+touch_addbutton "_menu_border_U" "*White" "" 0.077000 0.183333 0.480000 0.188333 135 207 255 255 6
+touch_addbutton "_menu_border_L" "*White" "" 0.077000 0.188333 0.080000 0.947667 135 207 255 255 6
+touch_addbutton "_menu_border_R" "*White" "" 0.480000 0.188333 0.483000 0.947667 135 207 255 255 6
+touch_addbutton "_menu_line_01" "*White" "" 0.080000 0.311250 0.480000 0.316250 135 207 255 255 6
+touch_addbutton "_menu_title" "#Fast Weapon Shop © SercanDev" "" 0.090000 0.230185 0.310000 0.272037 135 207 255 255 6
+touch_addbutton "_menu_exit" "img/berzo_exit" "_exit_menu; _click_cnd" 0.430000 0.209167 0.470000 0.292833 255 255 255 255 6
+
+// --------------------------------------------------------------------------- \\
+
+touch_addbutton "_menu_slot1" "#[AK47]" "" 0.090000 0.376500 0.230000 0.418333 255 255 0 255 6
+touch_addbutton "_menu_slot2" "#[M4A1]" "" 0.290000 0.376500 0.430000 0.418333 255 255 0 255 6
+touch_addbutton "_menu_slot3" "#[AWP]" "" 0.090000 0.460167 0.230000 0.502000 255 255 0 255 6
+touch_addbutton "_menu_slot4" "#[DEAGLE]" "" 0.290000 0.460167 0.430000 0.502000 255 255 0 255 6
+touch_addbutton "_menu_slot5" "#[Bombs]" "" 0.090000 0.543833 0.230000 0.585667 255 255 0 255 6
+touch_addbutton "_menu_slot6" "#[Bullet + Armor Helmet]" "" 0.290000 0.543833 0.430000 0.585667 255 255 0 255 6
+
+// --------------------------------------------------------------------------- \\
+
+touch_addbutton "_menu_slot_highlight1" "*White" "+press_ak47_slot1" 0.080000 0.355583 0.280000 0.439250 160 160 160 120 6
+touch_addbutton "_menu_slot_highlight2" "*White" "+press_m4a1_slot2" 0.280000 0.355583 0.480000 0.439250 160 160 160 120 6
+touch_addbutton "_menu_slot_highlight3" "*White" "+press_awp_slot3" 0.080000 0.439250 0.280000 0.522917 160 160 160 120 6
+touch_addbutton "_menu_slot_highlight4" "*White" "+press_deagle_slot4" 0.280000 0.439250 0.480000 0.522917 160 160 160 120 6
+touch_addbutton "_menu_slot_highlight5" "*White" "+press_bomba_slot5" 0.080000 0.522917 0.280000 0.606583 160 160 160 120 6
+touch_addbutton "_menu_slot_highlight6" "*White" "+press_autobuy_slot6" 0.280000 0.522917 0.480000 0.606583 160 160 160 120 6
+
+// --------------------------------------------------------------------------- \\
+
+touch_setcolor _menu_*_highlight 255 255 255 0
+
+
+alias +press_ak47_slot1 "touch_setcolor _menu_slot_highlight1 255 255 255 150"
+alias -press_ak47_slot1 "touch_setcolor _menu_slot_highlight1 255 255 255 0; ak47; _click_sel"
+
+alias +press_m4a1_slot2 "touch_setcolor _menu_slot_highlight2 255 255 255 150"
+alias -press_m4a1_slot2 "touch_setcolor _menu_slot_highlight2 255 255 255 0; m4a1; _click_sel"
+
+alias +press_awp_slot3 "touch_setcolor _menu_slot_highlight3 255 255 255 150"
+alias -press_awp_slot3 "touch_setcolor _menu_slot_highlight3 255 255 255 0; awp; _click_sel"
+
+alias +press_deagle_slot4 "touch_setcolor _menu_slot_highlight4 255 255 255 150"
+alias -press_deagle_slot4 "touch_setcolor _menu_slot_highlight4 255 255 255 0; deagle; _click_sel"
+
+alias +press_bomba_slot5 "touch_setcolor _menu_slot_highlight5 255 255 255 150"
+alias -press_bomba_slot5 "touch_setcolor _menu_slot_highlight5 255 255 255 0; flash;hegren;sgren; _click_sel"
+
+alias +press_autobuy_slot6 "touch_setcolor _menu_slot_highlight6 255 255 255 150"
+alias -press_autobuy_slot6 "touch_setcolor _menu_slot_highlight6 255 255 255 0; autobuy; _click_sel"
+
+// --------------------------------------------------------------------------- \\
+
+touch_addbutton "_menu_image1" "img/ak47" "" 0.240000 0.355583 0.280000 0.439250 255 255 255 255 6
+touch_addbutton "_menu_image2" "img/m4a1" "" 0.440000 0.355583 0.480000 0.439250 255 255 255 255 6
+touch_addbutton "_menu_image3" "img/awp" "" 0.240000 0.439250 0.280000 0.522917 255 255 255 255 6
+touch_addbutton "_menu_image4" "img/deagle" "" 0.440000 0.439250 0.480000 0.522917 255 255 255 255 6
+touch_addbutton "_menu_image5" "img/hegrenade" "" 0.240000 0.522917 0.280000 0.606583 255 255 255 255 6
+touch_addbutton "_menu_image6" "img/kevlar_helmet" "" 0.440000 0.522917 0.480000 0.606583 255 255 255 255 6
